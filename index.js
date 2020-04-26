@@ -102,9 +102,31 @@ inquirer.prompt(readmeInfo)
 
   function compileAnswers(input) {
     return (`
-    
-    test ${input.tests} and license ${input.license}`)
-  }
+    ${input.title}
+
+    By ${input.username}
+
+    ${input.descriptionOne}
+
+    ${input.imageUrlOne}
+
+    ${input.descriptionTwo}
+
+    ${input.imageUrlTwo}
+
+    ${input.descriptionThree}
+
+    ${input.credits}
+
+    ${input.license}
+
+    ${input.contributing}
+
+    ${input.tests}
+
+    ${input.faq}
+  `
+    )}
 
 
 // function writeToFile (output) {
