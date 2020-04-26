@@ -1,0 +1,15 @@
+{
+  "name": "readme_generator",
+  "version": "1.0.0",
+  "description": "Andrew's okay readme generator.",
+  "main": "script.js",
+  "dependencies": {
+    "inquirer": "^7.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "andrew",
+  "license": "ISC"
+}
