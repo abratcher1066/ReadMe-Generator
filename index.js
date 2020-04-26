@@ -80,15 +80,43 @@ let readmeInfo = [
       name: "faq"
     },
   ]
-  // let's save the answers as a variable we can call up
+  // ok, we need functions.
+  // 1. a function for 
+
+  // gives user questions
+inquirer.prompt(readmeInfo)
+  .then(function (response) {
+    let content = compileAnswers(response)
+    writeToFile(content)
+  })
+
+  function writeToFile(output) {
+    fs.writeFile('text.txt', output, function (err) {
+      if (err) {
+        return console.log(err);
+    }
+    console.log("Success!");
+    });
+
+  }
+
+  function compileAnswers(data) {
+    return ('test')
+  }
 
 
-  // ok, now to command the asking
-  inquirer.prompt(readmeInfo)
-  .then(function (response))
+// function writeToFile (output) {
+
+// }
+//   // ok, now to command the asking
+
+
+//   inquirer.prompt(readmeInfo)
+//     .then(function (response) {
+//        fs.writeFile("test.txt", response)
+//   })
     
 
-function createFile
 
 //w
   
@@ -195,5 +223,4 @@ function createFile
 
 
 // ---
-// © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
-
+// © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved
