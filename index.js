@@ -6,14 +6,6 @@ const fs = require('fs');
 // to generate their readme.
 const inquirer = require('inquirer');
 
-// // let's write to a test file until other features are working/work is donwe
-
-// fs.writeFile("log.txt", msg, function(err) {
-//     if (err) {
-//         return console.log(err);
-//     }
-//     console.log("Success!")
-// });
 
 // really got stuck for a long long time here.  trying to figure out
 // how to take questions and process them.  making them their own variable so i
@@ -80,17 +72,22 @@ let readmeInfo = [
       message: "LICENSE - Enter your README license.  If you need help choosing a license, check out choosealicense.com",
       name: "license"
     },
+    {
+      type: "input",
+      message: "QUESTIONS/CONTACT - Enter any specific instructions for people with questions.",
+      name: "contact"
+    },
+    
   ]
-  // ok, we need functions.
-  // 1. a function for 
 
-  // gives user questions
+// prompts user, waits til they fill it out, then writes it all to readme.md.
 inquirer.prompt(readmeInfo)
   .then(function (response) {
     let content = compileAnswers(response)
     exportAnswers(content)
   })
 
+// exports user answers and markdown content to file
   function exportAnswers(output) {
     fs.writeFile('README.md', output, function (err) {
       if (err) {
@@ -101,13 +98,14 @@ inquirer.prompt(readmeInfo)
 
   }
 
+// populates markdown content with user answers
 function compileAnswers(input) {
 return (
   `
-
 # ${input.title}
 ----
 ## By ${input.username}
+[![Build Status](https://travis-ci.com/username/projectname.svg?branch=master)](https://travis-ci.com/username/projectname)
 
 ### Description
 ----
@@ -124,6 +122,7 @@ ${input.descriptionOne}
 * [Testing](#testing)
 * [FAQ](#faq)
 * [License](#license)
+* [Questions/Contact]
 
 ### Installation
 ----
@@ -156,6 +155,19 @@ ${input.faq}
 ----
 ${input.license}
 
+### Questions/Contact
+----
+${input.contact}
+
+
 
 `
     )}
+
+
+    var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello Travis!\n')
+}).listen(1337, '127.0.0.1');
+console.log('Server running at http://127.0.0.1:1337/');

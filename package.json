@@ -6,9 +6,11 @@
   "dependencies": {
     "inquirer": "^7.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jshint": "^2.11.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jshint hello.js"
   },
   "author": "andrew",
   "license": "ISC"
