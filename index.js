@@ -91,7 +91,7 @@ inquirer.prompt(readmeInfo)
   })
 
   function exportAnswers(output) {
-    fs.writeFile('test.html', output, function (err) {
+    fs.writeFile('test.md', output, function (err) {
       if (err) {
         return console.log(err);
     }
@@ -100,41 +100,43 @@ inquirer.prompt(readmeInfo)
 
   }
 
-  function compileAnswers(input) {
-    return (`
-    <html>
-    <head>
-      <title>${input.title}</title>
-    </head>
-    <h1>${input.title}</h1>
-    <h2> By ${input.username}</h2>
+function compileAnswers(input) {
+return (`
+#${input.title}
+## By ${input.username}
    
-    <h3> Description </h3>
-    <div>${input.descriptionOne}</div>
+    ### Description
+    ----
+    ${input.descriptionOne}
 
-    <img src="${input.imageUrlOne}" alt="first image">
+    ![first image](${input.imageUrlOne})
 
-    <div>${input.descriptionTwo}</div>
+    ${input.descriptionTwo}
 
-    <img src="${input.imageUrlTwo}" alt="second image">
+    ![second image](${input.imageUrlTwo})
 
     <div>${input.descriptionThree}</div>
 
 
-    <h3> Credits </h3>
-    <div>${input.credits}</div>
+    ### Credits
+    ----
+    ${input.credits}
 
-    <h3> License </h3>
-    <div>${input.license}</div>
+    ### License
+    ----
+    ${input.license}
 
-    <h3> Contributing </h3>
-    <div>${input.contributing}</div>
+    ### Contributing
+    ----
+    ${input.contributing}
 
-    <h3> How to Test </h3>
-    <div>${input.tests}</div>
+    ### How to Test
+    ----
+    ${input.tests}
 
-    <h3> FAQ - Frequently Asked Questions </h3>
-    <div>${input.faq}</div>
+    ### FAQ - Frequently Asked Questions
+    ----
+    ${input.faq}
   `
     )}
 
