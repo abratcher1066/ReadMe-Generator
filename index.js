@@ -62,7 +62,7 @@ let readmeInfo = [
     },
     {
       type: "input",
-      message: "CREDITS - Enter ",
+      message: "CREDITS - Please enter the names of people you'd like to thank.  You can use @user to tag them!",
       name: "contributing"
     },
     {
@@ -92,7 +92,7 @@ inquirer.prompt(readmeInfo)
   })
 
   function exportAnswers(output) {
-    fs.writeFile('test.md', output, function (err) {
+    fs.writeFile('README.md', output, function (err) {
       if (err) {
         return console.log(err);
     }
@@ -116,12 +116,14 @@ ${input.descriptionOne}
 ![first image](${input.imageUrlOne})
 
 ### Table of Contents
+----
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [Credits](#credits)
+* [Testing](#testing)
+* [FAQ](#faq)
 * [License](#license)
-----
 
 ### Installation
 ----
@@ -131,18 +133,14 @@ ${input.descriptionTwo}
 
 
 ### Usage
+----
 ${input.descriptionThree}
 
-
 ### Contributing
 ----
-${input.credits}
+${input.contributing}
 
-### License
-----
-${input.license}
-
-### Contributing
+### Credits
 ----
 ${input.contributing}
 
@@ -153,6 +151,11 @@ ${input.tests}
 ### FAQ - Frequently Asked Questions
 ----
 ${input.faq}
+
+### License
+----
+${input.license}
+
 
 `
     )}
