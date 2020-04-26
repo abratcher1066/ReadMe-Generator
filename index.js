@@ -122,7 +122,7 @@ ${input.descriptionOne}
 * [Testing](#testing)
 * [FAQ](#faq)
 * [License](#license)
-* [Questions/Contact]
+* [Questions/Contact](#contact)
 
 ### Installation
 ----
@@ -131,29 +131,36 @@ ${input.descriptionTwo}
 ![second image](${input.imageUrlTwo})
 
 
+
 ### Usage
 ----
 ${input.descriptionThree}
+
 
 ### Contributing
 ----
 ${input.contributing}
 
+
 ### Credits
 ----
 ${input.contributing}
+
 
 ### How to Test
 ----
 ${input.tests}
 
+
 ### FAQ - Frequently Asked Questions
 ----
 ${input.faq}
 
+
 ### License
 ----
 ${input.license}
+
 
 ### Questions/Contact
 ----
@@ -163,11 +170,3 @@ ${input.contact}
 
 `
     )}
-
-
-    var http = require('http');
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello Travis!\n')
-}).listen(1337, '127.0.0.1');
-console.log('Server running at http://127.0.0.1:1337/');
