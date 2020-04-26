@@ -6,6 +6,8 @@ const fs = require('fs');
 // to generate their readme.
 const inquirer = require('inquirer');
 
+const axios = require("axios");
+
 
 // really got stuck for a long long time here.  trying to figure out
 // how to take questions and process them.  making them their own variable so i
@@ -103,17 +105,15 @@ function compileAnswers(input) {
 return (
   `
 # ${input.title}
-----
-## By ${input.username}
-[![Build Status](https://travis-ci.com/username/projectname.svg?branch=master)](https://travis-ci.com/username/projectname)
+[![Build Status](https://travis-ci.com/tanksareforcowards/09_readme_generator.svg?branch=master)](https://travis-ci.com/tanksareforcowards/09_readme_generator)
 
-### Description
+## Description
 ----
 ${input.descriptionOne}
 
 ![first image](${input.imageUrlOne})
 
-### Table of Contents
+## Table of Contents
 ----
 * [Installation](#installation)
 * [Usage](#usage)
@@ -124,7 +124,7 @@ ${input.descriptionOne}
 * [License](#license)
 * [Questions/Contact](#contact)
 
-### Installation
+## Installation
 ----
 ${input.descriptionTwo}
 
@@ -132,17 +132,17 @@ ${input.descriptionTwo}
 
 
 
-### Usage
+## Usage
 ----
 ${input.descriptionThree}
 
 
-### Contributing
+## Contributing
 ----
 ${input.contributing}
 
 
-### Credits
+## Credits
 ----
 ${input.contributing}
 
@@ -166,7 +166,9 @@ ${input.license}
 ----
 ${input.contact}
 
+This Readme was compiled by 
 
+![Compiler portrait](https://avatars.githubusercontent.com/${input.username}) [${input.username}](https://github.com/${input.username}) 
 
 `
     )}

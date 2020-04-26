@@ -1,16 +1,16 @@
 
-# My Project
-----
-## By Tanksareforcowards
-[![Build Status](https://travis-ci.com/username/projectname.svg?branch=master)](https://travis-ci.com/username/projectname)
+# Readme Generator
 
-### Description
+[![Build Status](https://travis-ci.com/tanksareforcowards/09_readme_generator.svg?branch=master)](https://travis-ci.com/tanksareforcowards/09_readme_generator)
+
+## Description
 ----
-This Readme generator creates an .md file you can use for your github repo page.
+This Readme generator creates an .md file in markup language that you can use for your github project page.  Just enter your repo's information where needed.  You'll be asked to complete every field here, and have the opportunity to upload two images.
 
 ![first image](https://i.kym-cdn.com/photos/images/newsfeed/000/839/199/8a9.jpg)
 
-### Table of Contents
+
+## Table of Contents
 ----
 * [Installation](#installation)
 * [Usage](#usage)
@@ -21,40 +21,55 @@ This Readme generator creates an .md file you can use for your github repo page.
 * [License](#license)
 * [Questions/Contact](#contact)
 
-### Installation
+
+## Installation
 ----
 Just clone the repo and open index.js in your jsnode terminal.  When you're sure it's ready, run the file with the command `node index.js`.  Enter your information and you're good to go.
 
 ![second image](https://i.pinimg.com/originals/36/9b/c0/369bc01e4c301bff41711a2241a4213f.jpg)
 
 
-### Usage
+## Usage
 ----
 Use this program and you, too, will experience this kind of excitement.
 
-### Contributing
+
+## Contributing
+----
+If you'd like to contribute, please feel free to clone this repo and make any changes you like.
+
+
+## Credits
 ----
 I'd like to thank @tanksareforcowards.
 
-### Credits
+## How to Test
 ----
-I'd like to thank @tanksareforcowards.
+To test the program, try running it. 
 
-### How to Test
+## FAQ - Frequently Asked Questions
 ----
-To test the program, try running it.
+### Q: Why can't you get badges working?  
+A: I wish I knew.
 
-### FAQ - Frequently Asked Questions
-----
-#### Q: Why can't you get badges working?  A: I wish I knew.
-
-### License
+## License
 ----
 MIT License
 
-### Questions/Contact
-----
+Copyright (c) 2020 Andrew Bratcher
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
 
+## Questions/Contact
+----
+
+This Readme was compiled by 
+
+![Compiler portrait](https://avatars.githubusercontent.com/tanksareforcowards) [Tanksareforcowards](https://github.com/tanksareforcowards) 
 
