@@ -106,28 +106,35 @@ inquirer.prompt(readmeInfo)
     <head>
       <title>${input.title}</title>
     </head>
+    <h1>${input.title}</h1>
+    <h2> By ${input.username}</h2>
+   
+    <h3> Description </h3>
+    <div>${input.descriptionOne}</div>
 
-    <h1> By ${input.username}</h1>
+    <img src="${input.imageUrlOne}" alt="first image">
 
-    ${input.descriptionOne}
+    <div>${input.descriptionTwo}</div>
 
-    ${input.imageUrlOne}
+    <img src="${input.imageUrlTwo}" alt="second image">
 
-    ${input.descriptionTwo}
+    <div>${input.descriptionThree}</div>
 
-    ${input.imageUrlTwo}
 
-    ${input.descriptionThree}
+    <h3> Credits </h3>
+    <div>${input.credits}</div>
 
-    ${input.credits}
+    <h3> License </h3>
+    <div>${input.license}</div>
 
-    ${input.license}
+    <h3> Contributing </h3>
+    <div>${input.contributing}</div>
 
-    ${input.contributing}
+    <h3> How to Test </h3>
+    <div>${input.tests}</div>
 
-    ${input.tests}
-
-    ${input.faq}
+    <h3> FAQ - Frequently Asked Questions </h3>
+    <div>${input.faq}</div>
   `
     )}
 
