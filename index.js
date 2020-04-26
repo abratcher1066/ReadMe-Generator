@@ -101,43 +101,47 @@ inquirer.prompt(readmeInfo)
   }
 
 function compileAnswers(input) {
-return (`
-#${input.title}
-## By ${input.username}
-   
-    ### Description
-    ----
-    ${input.descriptionOne}
-
-    ![first image](${input.imageUrlOne})
-
-    ${input.descriptionTwo}
-
-    ![second image](${input.imageUrlTwo})
-
-    <div>${input.descriptionThree}</div>
-
-
-    ### Credits
-    ----
-    ${input.credits}
-
-    ### License
-    ----
-    ${input.license}
-
-    ### Contributing
-    ----
-    ${input.contributing}
-
-    ### How to Test
-    ----
-    ${input.tests}
-
-    ### FAQ - Frequently Asked Questions
-    ----
-    ${input.faq}
+return (
   `
+
+# ${input.title}
+## By ${input.username}
+
+### Description
+
+----
+${input.descriptionOne}
+
+![first image](${input.imageUrlOne})
+
+${input.descriptionTwo}
+
+![second image](${input.imageUrlTwo})
+
+<div>${input.descriptionThree}</div>
+
+
+### Credits
+----
+${input.credits}
+
+### License
+----
+${input.license}
+
+### Contributing
+----
+${input.contributing}
+
+### How to Test
+----
+${input.tests}
+
+### FAQ - Frequently Asked Questions
+----
+${input.faq}
+
+`
     )}
 
 
