@@ -87,10 +87,10 @@ let readmeInfo = [
 inquirer.prompt(readmeInfo)
   .then(function (response) {
     let content = compileAnswers(response)
-    writeToFile(content)
+    exportAnswers(content)
   })
 
-  function writeToFile(output) {
+  function exportAnswers(output) {
     fs.writeFile('text.txt', output, function (err) {
       if (err) {
         return console.log(err);
@@ -100,8 +100,10 @@ inquirer.prompt(readmeInfo)
 
   }
 
-  function compileAnswers(data) {
-    return ('test')
+  function compileAnswers(input) {
+    return (`
+    
+    test ${input.tests} and license ${input.license}`)
   }
 
 
