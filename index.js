@@ -91,7 +91,7 @@ inquirer.prompt(readmeInfo)
   })
 
   function exportAnswers(output) {
-    fs.writeFile('text.txt', output, function (err) {
+    fs.writeFile('test.html', output, function (err) {
       if (err) {
         return console.log(err);
     }
@@ -102,9 +102,12 @@ inquirer.prompt(readmeInfo)
 
   function compileAnswers(input) {
     return (`
-    ${input.title}
+    <html>
+    <head>
+      <title>${input.title}</title>
+    </head>
 
-    By ${input.username}
+    <h1> By ${input.username}</h1>
 
     ${input.descriptionOne}
 
